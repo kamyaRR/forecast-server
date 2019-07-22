@@ -35,7 +35,7 @@ function AboHava (req,res){
  console.log(makan);
   if(makan.length > 0){
     res.writeHead(200, {'Content-Type' : 'text/plain'});
-    res.write('AboHava shahraye iran');
+    res.write('AboHava shahraye iran zamin');
     res.end();
   }
   
