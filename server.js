@@ -6,7 +6,7 @@ http.createServer(
 //localhost:5000
 router.home(req,res)
 
-//localhost:5000/shahr
+//localhost:5000/city
 router.forecast(req,res)
 }).listen(5000);
 

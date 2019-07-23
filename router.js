@@ -17,7 +17,7 @@ function asli (req,res){
        
        req.on('data', function(vivi){
          var query = querystring.parse(vivi.toString());
-         //console.log(query.location);
+         console.log(query.location);
          res.writeHead(302,{"Location" : "/" + query.location})
          res.end();
         
