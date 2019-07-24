@@ -1,0 +1,16 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "test for nodejs",
+  "main": "example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kamyar Abolhasani",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  }
+}
