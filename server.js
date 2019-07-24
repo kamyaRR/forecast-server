@@ -11,4 +11,4 @@ router.forecast(req,res)
 }).listen(5000);
 
 
-console.log('server is starting');
+console.log('server is runnig');
