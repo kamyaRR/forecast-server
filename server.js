@@ -8,7 +8,7 @@ router.home(req,res)
 
 //localhost:5000/city
 router.forecast(req,res)
-}).listen(5000);
+}).listen(6000);
 
 
 console.log('server is runnig');
