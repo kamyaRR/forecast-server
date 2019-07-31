@@ -1,42 +1,33 @@
-var http = require('http');
-var url = require('url');
+var hhtp =require('http');
 module.exports.home = asli;
-module.exports.forecast = AboHava;
+module.exports.shahr = shahr;
+var querysttring = require('querystring')
 var render = require('./render');
-var querystring = require('querystring');
-
 function asli (req,res){
-  if(req.url == '/'){
-
-       if(req.method == "GET"){
-        
-      render.view("locatio", {}, res)
+  if(req.url == "/"){
+    if(req.method == "GET"){
+      res.writeHead(200, {'Content-Type': 'text.html'});
+      render.view("location" , res)
       res.end();
-     }
-     else{
-       
-       req.on('data', function(vivi){
-         var query = querystring.parse(vivi.toString());
-         //console.log(query.location);
-         res.writeHead(302,{"Location" : "/" + query.location})
-         res.end();
-        
-       })
-       
-     }
+    }
+      else{
+        req.on('data' , function(gg){
+          var query = querysttring.parse(gg.toString())
+          //console.log(query);
+          res.writeHead(302, {"Location" : "/" + query.location});
+          res.end();
+        })
+      }
+    
   }
 }
-
-
-
-function AboHava (req,res){
-  
-  var makan =req.url.replace("/", "")
- console.log(makan);
+function shahr(req,res){
+  var makan = req.url.replace("/", "")
+  //console.log(makan);
   if(makan.length > 0){
-    res.writeHead(200, {'Content-Type' : 'text/plain'});
-    res.write('AboHava shahraye iran zamin');
+    res.writeHead(200, {"Content.Type": "text.plain"})
+    res.write("ABolhava");
     res.end();
   }
-  
+
 }

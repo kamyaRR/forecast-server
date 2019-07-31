@@ -1,14 +1,12 @@
-var http = require('http');
+var http =  require('http');
 var router = require('./router');
-http.createServer(
-    (req,res)=>{
+http.createServer(function(req,res){
+    //safe asli
+    router.home(req,res)
 
-//localhost:5000
-router.home(req,res)
+    //safe shahrha
+    router.shahr(req,res)
 
-//localhost:5000/city
-router.forecast(req,res)
-}).listen(6000);
-
-
-console.log('server is runnig');
+}).listen(5000 ,function(){
+    console.log('server is runnig'); 
+})
